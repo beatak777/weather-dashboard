@@ -33,9 +33,11 @@ $(document).ready(function () {
         });
     }
 
-    // Function to display current weather conditions
+    // Function to get current weather conditions
     function displayCurrentWeather(data) {
         const currentWeather = data.list[0];
+        //icons
+        const iconUrl = getIconUrl(currentWeather.weather[0].icon);
 
         // Convert temperature from Kelvin to Celsius
         const temperatureCelsius = kelvinToCelsius(currentWeather.main.temp);
@@ -47,6 +49,7 @@ $(document).ready(function () {
             <p>Temperature: ${temperatureCelsius.toFixed(2)} °C</p>
             <p>Humidity: ${currentWeather.main.humidity}%</p>
             <p>Wind Speed: ${currentWeather.wind.speed} m/s</p>
+            <img src="${iconUrl}" alt="Weather Icon">
         `);
     }
 
@@ -59,12 +62,16 @@ $(document).ready(function () {
         forecast.forEach(day => {
             // Convert temperature from Kelvin to Celsius
             const temperatureCelsius = kelvinToCelsius(day.main.temp);
+            //image icon 
+            const iconUrl = getIconUrl(day.weather[0].icon);
 
             $("#forecast").append(`
                 <div class="col-md-2">
                     <h4>${dayjs(day.dt_txt).format("YYYY-MM-DD")}</h4>
                     <p>Temperature: ${temperatureCelsius.toFixed(2)} °C</p>
                     <p>Humidity: ${day.main.humidity}%</p>
+                    <p>Wind Speed: ${day.wind.speed} m/s</p>
+                    <img src="${iconUrl}" alt="Weather Icon">
                 </div>
             `);
         });
@@ -73,6 +80,11 @@ $(document).ready(function () {
     // Function to convert Kelvin to Celsius
     function kelvinToCelsius(kelvin) {
         return kelvin - 273.15;
+    }
+
+    // Function to get the weather icon URL
+    function getIconUrl(iconCode) {
+        return `https://openweathermap.org/img/w/${iconCode}.png`;
     }
 
     // Function to save city to search history in localStorage
