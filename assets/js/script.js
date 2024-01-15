@@ -37,11 +37,14 @@ $(document).ready(function () {
     function displayCurrentWeather(data) {
         const currentWeather = data.list[0];
 
+        // Convert temperature from Kelvin to Celsius
+        const temperatureCelsius = kelvinToCelsius(currentWeather.main.temp);
+
         // Update HTML with current weather information
         $("#today").html(`
             <h2>${data.city.name}</h2>
             <p>Date: ${dayjs(currentWeather.dt_txt).format("YYYY-MM-DD HH:mm:ss")}</p>
-            <p>Temperature: ${currentWeather.main.temp} °C</p>
+            <p>Temperature: ${temperatureCelsius.toFixed(2)} °C</p>
             <p>Humidity: ${currentWeather.main.humidity}%</p>
             <p>Wind Speed: ${currentWeather.wind.speed} m/s</p>
         `);
@@ -54,14 +57,22 @@ $(document).ready(function () {
         // Update HTML with forecast information
         $("#forecast").html("");
         forecast.forEach(day => {
+            // Convert temperature from Kelvin to Celsius
+            const temperatureCelsius = kelvinToCelsius(day.main.temp);
+
             $("#forecast").append(`
                 <div class="col-md-2">
                     <h4>${dayjs(day.dt_txt).format("YYYY-MM-DD")}</h4>
-                    <p>Temperature: ${day.main.temp} °C</p>
+                    <p>Temperature: ${temperatureCelsius.toFixed(2)} °C</p>
                     <p>Humidity: ${day.main.humidity}%</p>
                 </div>
             `);
         });
+    }
+
+    // Function to convert Kelvin to Celsius
+    function kelvinToCelsius(kelvin) {
+        return kelvin - 273.15;
     }
 
     // Function to save city to search history in localStorage
