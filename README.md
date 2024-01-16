@@ -1,9 +1,9 @@
 # Weather Dashboard 
 
 ##  <a name='Description'></a>Description
-The aim of this project was to fulfil every task that needed to be done in order for the application to run smoothly. As a complete beginner in this field I am satisfied that the website is showcasing the current weather and a 5 day foreast as well. Previous searches stay on the screen and accessible for suer later on.
+The aim of this project was to fulfil every task that needed to be done in order for the application to run smoothly. As a complete beginner in this field I am satisfied that the website is showcasing the current weather and a 5 day foreast as well. Previous searches stay on the screen and accessible for user later on.
 
-In addition to the design of the page I utilised bootstrap that allows the page to run on a smartphone and tablet as well without any displaying issues. I added some colours to the page to make the weather search a bit more stylish. Previous searches stay on the screen and accessible for suer later on.
+In addition to the design of the page I utilised bootstrap that allows the page to run on a smartphone and tablet as well without any displaying issues. I added some colours to the page to make the weather search a bit more stylish. 
 
 The pages runs on a free API, that updates the weather every three hour. This can be modified and further developed if the user decides to upgrade for a paid version that updates the time more frequently.
 
