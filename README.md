@@ -24,29 +24,32 @@ In addition to the design of the page I utilised bootstrap that allows the page 
 
 - ![Deployed Page Screenshot]()
 
-- [Deployed Github Page](https://beatak777.github.io/)
+- [Deployed Github Page](https://beatak777.github.io/weather-dashboard/)
 
 
 ##  <a name='Comments'></a>Comments
 
 
 ##   <a name='Installation'></a>Installation
-No Installation necessary although it is not forbidden to do so. If you decide to install here are the steps for you:
-1. Download or clone repository
-3. Navigate to project directory
-2. Open index.html in your browser
+No Installation necessary although it is not forbidden to do so. 
 
-Please use your personal API key for this as this is important to do so. You can register on the following website. 
+If you decide to install 
+-> Please use YOUR PERSONAL API key for this as this is important to do so. You can register on the following website. -> [Open Weather Map](https://openweathermap.org/)
 
 Make sure you wait at least two hours before use, this is the required time for the API key to get activated.
 
-Afterwards, open the javascript file and insert your own API. 
+Afterwards, open the javascript file and insert your own API on line three. 
+<!-- $(document).ready(function () {
+    const apiKey = "YOUROWNAPIKEY"; -->
+
 
 ##   <a name='Credits'></a>Credits
 
 - Default files provided by [edX Bootcamp](https://www.edx.org/course/skills-bootcamp-in-front-end-web-development).
 
 - Table of Contents was Created with the Visual Studio Code Extension 'Markdown TOC' available [here](https://marketplace.visualstudio.com/items?itemName=dumeng.markdown-toc).
+
+- Sample codes were utilised certain JS code from [Open Weather Map](https://openweathermap.org/)
 
 
 ##   <a name='License'></a>License
