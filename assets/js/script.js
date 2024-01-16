@@ -42,9 +42,10 @@ $(document).ready(function () {
         // Convert temperature from Kelvin to Celsius
         const temperatureCelsius = kelvinToCelsius(currentWeather.main.temp);
 
-        // Update HTML with current weather information
+        // Update HTML with current weather information 
+        //if the user decides to add a digital clock: HH:mm:ss
         $("#today").html(`
-            <h2>${data.city.name} ${dayjs(currentWeather.dt_txt).format("YYYY-MM-DD HH:mm:ss")}</h2> 
+            <h2>${data.city.name} ${dayjs(currentWeather.dt_txt).format("YYYY-MM-DD")}</h2> 
             <img src="${iconUrl}" alt="Weather Icon">
             <p>Temperature: ${temperatureCelsius.toFixed(2)} °C</p>
             <p>Humidity: ${currentWeather.main.humidity}%</p>
