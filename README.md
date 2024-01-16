@@ -45,7 +45,7 @@ Afterwards, open the javascript file and insert your own API.
 ##   <a name='Credits'></a>Credits
 
 - Default files provided by [edX Bootcamp](https://www.edx.org/course/skills-bootcamp-in-front-end-web-development).
-- Code refactoring by [Bea Konya](https://github.com/beatak777).
+
 - Table of Contents was Created with the Visual Studio Code Extension 'Markdown TOC' available [here](https://marketplace.visualstudio.com/items?itemName=dumeng.markdown-toc).
 
 
