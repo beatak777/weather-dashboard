@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    const apiKey = "71b4497f13724d83825077104f9bc741";
+    const apiKey = "71b4497f13724d83825077104f9bc741"; // PLease use your own API key in case of usage
 
     $("#search-form").submit(function (event) {
         event.preventDefault();
