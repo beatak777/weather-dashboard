@@ -44,12 +44,12 @@ $(document).ready(function () {
 
         // Update HTML with current weather information
         $("#today").html(`
-            <h2>${data.city.name}</h2>
-            <p>Date: ${dayjs(currentWeather.dt_txt).format("YYYY-MM-DD HH:mm:ss")}</p>
+            <h2>${data.city.name} ${dayjs(currentWeather.dt_txt).format("YYYY-MM-DD HH:mm:ss")}</h2> 
+            <img src="${iconUrl}" alt="Weather Icon">
             <p>Temperature: ${temperatureCelsius.toFixed(2)} °C</p>
             <p>Humidity: ${currentWeather.main.humidity}%</p>
             <p>Wind Speed: ${currentWeather.wind.speed} m/s</p>
-            <img src="${iconUrl}" alt="Weather Icon">
+            
         `);
     }
 

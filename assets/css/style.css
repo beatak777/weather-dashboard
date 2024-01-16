@@ -1,0 +1,56 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-color: snow;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.weather-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    background-color: #635d63;
+}
+
+/* Search form and history styling */
+.form {
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.weather-search {
+    width: 70%;
+}
+
+.weather-hr {
+    border: 1px solid #dee2e6;
+}
+
+.list-group {
+    margin-top: 20px;
+}
+
+/* Current weather and forecast styling */
+#today {
+    border-radius: 13px;
+    justify-content: center;
+    border: pink 1px solid;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: lightpink;
+}
+
+/* Forecast days styling */
+#forecast .col-md-2 {
+    margin-bottom: 20px;
+    border: 1px solid pink;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto;
+    background-color: lightsalmon;
+}
